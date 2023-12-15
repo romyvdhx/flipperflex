@@ -1,7 +1,9 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Plunger : MonoBehaviour
 {
+    [SerializeField] private UnityEvent OnYeet;
     private GameObject ball;
 
     void Start()
@@ -13,6 +15,7 @@ public class Plunger : MonoBehaviour
         if (ball && Input.GetKeyDown(KeyCode.Space)) 
         {
             ball.GetComponent<Rigidbody>().AddForce(transform.up * Random.Range(200, 300));
+            OnYeet.Invoke();
         }
     }
 

@@ -9,6 +9,7 @@ public class BallReset : MonoBehaviour
     [SerializeField] private Vector3 resetPosition;
 
     void OnTriggerEnter(Collider collider) {
+        
        if (!collider.CompareTag("Player")) return;
 
         ball.position = resetPosition;

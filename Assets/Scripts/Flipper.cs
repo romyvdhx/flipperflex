@@ -31,6 +31,7 @@ public class Flipper : MonoBehaviour
     
         if (Input.GetMouseButton(mouseButton)) {
             jointSpring.targetPosition = targetPosition;
+            
         }
 
         hinge.spring = jointSpring;
